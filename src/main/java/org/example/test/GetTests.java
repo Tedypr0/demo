@@ -27,4 +27,22 @@ public class GetTests {
         //Assert
         Assertions.assertEquals(car, receivedCar);
     }
+
+    @Test
+    public void get_should_removeAllElements_fromQueue() throws InterruptedException {
+        //Arrange
+        Car car = Helpers.createMockCar();
+        Car car2 = Helpers.createMockCar("car");
+
+        //Act
+        queue.add(car);
+        queue.get();
+        queue.add(car2);
+        queue.add(car);
+        queue.get();
+        queue.get();
+        //Assert
+        Assertions.assertEquals(0, queue.size());
+
+    }
 }
