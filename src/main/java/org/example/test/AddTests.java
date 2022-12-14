@@ -36,10 +36,12 @@ public class AddTests {
         //Act
         queue.add(car);
         queue.add(car);
+        queue.add(car);
+        queue.add(car);
+        queue.add(car);
+        queue.add(car);
 
         //Assert
         Assertions.assertEquals(1, queue.size());
     }
-
-
 }
