@@ -33,13 +33,11 @@ public class AddTests {
     public void add_shouldDo_nothing_whenObject_alreadyExists() {
         //Arrange
         Car car = Helpers.createMockCar();
+
         //Act
-        queue.add(car);
-        queue.add(car);
-        queue.add(car);
-        queue.add(car);
-        queue.add(car);
-        queue.add(car);
+        for(int i =0; i<5; i++){
+            queue.add(car);
+        }
 
         //Assert
         Assertions.assertEquals(1, queue.size());

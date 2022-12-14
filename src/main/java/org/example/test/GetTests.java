@@ -43,6 +43,5 @@ public class GetTests {
         queue.get();
         //Assert
         Assertions.assertEquals(0, queue.size());
-
     }
 }
